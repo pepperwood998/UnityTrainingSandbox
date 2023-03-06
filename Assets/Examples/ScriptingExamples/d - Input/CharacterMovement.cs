@@ -6,6 +6,8 @@ public class CharacterMovement : MonoBehaviour
 {
   [SerializeField]
   float speed = 5;
+  [SerializeField]
+  float jumpSpeed = 7;
 
   Rigidbody rb;
 
@@ -27,7 +29,7 @@ public class CharacterMovement : MonoBehaviour
 
     if (Input.GetKeyDown(KeyCode.Space))
     {
-      rb.AddForce(Vector3.up * 5, ForceMode.Impulse);
+      rb.AddForce(Vector3.up * jumpSpeed, ForceMode.Impulse);
     }
   }
 }

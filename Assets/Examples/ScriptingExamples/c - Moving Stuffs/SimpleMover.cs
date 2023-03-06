@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class SimpleMover : MonoBehaviour
 {
-  float distFromStart;
-  float speed = 1f; // 1 ??n v? trên giây
-  float sideRange = 5f;
+  //float distFromStart;
+  float speed = 1f; // 1 don vi tren giay
+  //float sideRange = 5f;
 
   // Start is called before the first frame update
   void Start()
@@ -19,14 +19,16 @@ public class SimpleMover : MonoBehaviour
 
     //MoveToRight(frameSpeed);
 
-    //transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
+    var translateVector = new Vector3(frameSpeed, 0, 0);
+    transform.Translate(translateVector);
 
-    var targetPoint = new Vector3(sideRange, 0, 0);
-    transform.position = Vector3.MoveTowards(transform.position, targetPoint, frameSpeed);
+    //var targetPoint = new Vector3(sideRange, 0, 0);
+    //transform.position = Vector3.MoveTowards(transform.position, targetPoint, frameSpeed);
   }
 
-  void MoveToRight(float frameSpeed)
-  {
-    transform.position += new Vector3(frameSpeed, 0, 0);
-  }
+  //void MoveToRight(float frameSpeed)
+  //{
+  //  //transform.position += new Vector3(frameSpeed, 0, 0);
+  //  transform.position = transform.position + new Vector3(frameSpeed, 0, 0);
+  //}
 }

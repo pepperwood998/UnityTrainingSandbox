@@ -12,10 +12,10 @@ public class Enemy : MonoBehaviour
     health = 90;
 
     player = FindObjectOfType<Player>();
-    Debug.Log("Player co damage = " + player.damage);
   }
 
   void Start()
   {
+    Debug.Log("Player co damage = " + player.damage);
   }
 }
